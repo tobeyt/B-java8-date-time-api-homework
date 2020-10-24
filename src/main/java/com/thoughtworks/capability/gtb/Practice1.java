@@ -10,10 +10,14 @@ import java.time.LocalDate;
  */
 public class Practice1 {
 
+    public static final int MONTH_OF_LABOR_YEAR = 5;
+    public static final int DAY_OF_LABOR_MONTH = 1;
+    public static final int OFFSET_YEAR = 1;
+
     public static long getDaysBetweenNextLaborDay(LocalDate date) {
-        LocalDate laborDayOfThisYear = LocalDate.of(date.getYear(), 5, 1);
+        LocalDate laborDayOfThisYear = LocalDate.of(date.getYear(), MONTH_OF_LABOR_YEAR, DAY_OF_LABOR_MONTH);
         if (date.isAfter(laborDayOfThisYear)) {
-            laborDayOfThisYear = laborDayOfThisYear.plusYears(1);
+            laborDayOfThisYear = laborDayOfThisYear.plusYears(OFFSET_YEAR);
         }
         return (laborDayOfThisYear.toEpochDay() - date.toEpochDay());
     }
