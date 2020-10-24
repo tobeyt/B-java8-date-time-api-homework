@@ -1,6 +1,7 @@
 package com.thoughtworks.capability.gtb;
 
 import java.time.LocalDate;
+import java.time.Month;
 
 /**
  * 计算任意日期与下一个劳动节相差多少天
@@ -10,7 +11,7 @@ import java.time.LocalDate;
  */
 public class Practice1 {
 
-    public static final int MONTH_OF_LABOR_YEAR = 5;
+    public static final Month MONTH_OF_LABOR_YEAR = Month.MAY;
     public static final int DAY_OF_LABOR_MONTH = 1;
     public static final int OFFSET_YEAR = 1;
 
